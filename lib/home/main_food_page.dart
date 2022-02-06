@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp/home/foodpagebody.dart';
+import 'package:foodapp/widgets/big_text.dart';
+import 'package:foodapp/widgets/small_text.dart';
 
 class MainFoodPage extends StatefulWidget {
   MainFoodPage({Key? key}) : super(key: key);
@@ -20,7 +23,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
-                    children: [Text('India'), Text('India')],
+                    children: [BigText(size: 30,text: 'india',color: Colors.amber,), Row(children: [SmallText(text: 'India',),Icon(Icons.arrow_drop_down_rounded)],)],
                   ),
                   Container(
                     child: Icon(Icons.search,color: Colors.white,),
@@ -32,6 +35,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   )
                 ]),
           ),
+         
+          FoodPageBody(),
 
         
         
